@@ -1,70 +1,20 @@
-// task1
-const str: string = 'Vika';
-console.log(str);
 
-const num: number = 18;
-console.log(num);
-
-const boo: boolean = true;
-console.log(boo);
-
-const n: null = null;
-console.log(n);
-
-const und: undefined = undefined;
-console.log(und);
-
-const obj: object = {name: 'Vika'};
-console.log(obj);
-
-const an: any = 'Alina';
-console.log(an);
-
-function v (): void{
-    console.log('Ok')
-}
-v();
-
-function throwError(message: string): never {
-    throw new Error(message);
-}
-
-const unk: unknown = 10;
-if (typeof unk === 'number') {
-    console.log(unk + 10);
-}
-
-// Task2
-interface Person {
-    name: string;
-    age: number;
-    hobbies: string[];
-}
+import { Book } from './modules/task2/array';
+import { array } from './modules/task2/array';
+import { combiningDataTypes } from './modules/task3/combiningDataTypes';
 
 
-const person: Person = {
-    name: 'Vika',
-    age: 18,
-    hobbies: ['run', 'read']
-};
-console.log(person)
+// Task1
+const book = new Book('Book', 'Ostin Grey', 2021)
+book.information();
 
-// Task3
-const sum = (a: number,b: number):void  =>{
-    console.log(a + b)
-}
-sum(2,3);
+// task2
+const lastNumber: number | undefined =  array([1, 2, 3, 4, 5]);
+console.log(lastNumber);
 
-// Task4
-enum WeekDay {
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday
-}
+// task3
+combiningDataTypes('Vika');
+combiningDataTypes(5);
 
-const currentDay: WeekDay = WeekDay.Saturday;
-console.log("Today is:", currentDay);
+
+
